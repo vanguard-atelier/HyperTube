@@ -24,7 +24,7 @@ object ThemeHelper {
     fun updateTheme(activity: AppCompatActivity) {
         var accentColor = PreferenceHelper.getString(PreferenceKeys.ACCENT_COLOR, "")
         if (accentColor.isEmpty()) {
-            accentColor = if (DynamicColors.isDynamicColorAvailable()) "my" else "blue"
+            accentColor = "blue"
             PreferenceHelper.putString(PreferenceKeys.ACCENT_COLOR, accentColor)
         }
 
