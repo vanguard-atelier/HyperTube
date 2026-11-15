@@ -29,7 +29,6 @@ class AboutActivity : BaseActivity() {
             onBackPressedDispatcher.onBackPressed()
         }
 
-        setupCard(binding.donate, DONATE_URL)
         setupCard(binding.website, WEBSITE_URL)
         setupCard(binding.piped, PIPED_GITHUB_URL)
         setupCard(binding.translate, WEBLATE_URL)
