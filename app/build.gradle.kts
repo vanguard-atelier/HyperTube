@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.androidx.navigation.safeargs)
     alias(libs.plugins.ksp)
     alias(libs.plugins.google.protobuf)
@@ -104,6 +105,7 @@ android {
     buildFeatures {
         buildConfig = true
         resValues = true
+        compose = true
     }
 
     dependenciesInfo {
@@ -147,6 +149,13 @@ dependencies {
 
     /* Design */
     implementation(libs.material)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.foundation)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.animation)
+    implementation(libs.coil.compose)
 
     /* ExoPlayer */
     implementation(libs.androidx.media3.exoplayer)
