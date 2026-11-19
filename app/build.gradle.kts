@@ -7,7 +7,6 @@ plugins {
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.androidx.navigation.safeargs)
-    alias(libs.plugins.baselineprofile)
     alias(libs.plugins.ksp)
     alias(libs.plugins.google.protobuf)
 }
@@ -177,10 +176,6 @@ dependencies {
     /* Room */
     ksp(libs.room.compiler)
     implementation(libs.room)
-
-    /* Baseline profile generation */
-    implementation(libs.androidx.profileinstaller)
-    baselineProfile(project(":baselineprofile"))
 
     /* AndroidX Paging */
     implementation(libs.androidx.paging)

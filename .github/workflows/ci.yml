@@ -5,14 +5,10 @@ on:
   pull_request:
     paths-ignore:
       - "README*.md"
-      - "fastlane/**"
-      - "assets/**"
       - ".github/**/*.md"
   push:
     paths-ignore:
       - "README*.md"
-      - "fastlane/**"
-      - "assets/**"
       - ".github/**/*.md"
 
 jobs:
