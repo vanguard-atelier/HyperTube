@@ -2,6 +2,7 @@ package com.github.libretube.ui.fragments
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.Fragment
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import com.github.libretube.helpers.NavigationHelper
 import com.github.libretube.parcelable.PlayerData
