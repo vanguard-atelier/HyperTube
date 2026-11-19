@@ -3,6 +3,7 @@ package com.github.libretube.hyperui.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -128,7 +129,7 @@ fun HyperLibraryScreen(
                     XiaomiGalleryTile(
                         title = if (useMandarin) "喜欢的内容" else "Liked Videos",
                         subtitle = if (useMandarin) "已收藏" else "Favorites",
-                        iconRes = R.drawable.ic_favorite_filled,
+                        iconRes = R.drawable.ic_hearted,
                         onClick = { onPlaylistClick("liked") }
                     )
                 }

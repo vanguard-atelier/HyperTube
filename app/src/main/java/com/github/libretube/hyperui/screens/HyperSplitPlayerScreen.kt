@@ -349,7 +349,7 @@ fun HyperSplitPlayerScreen(
                         verticalArrangement = Arrangement.spacedBy(10.dp)
                     ) {
                         FloatingMiniCircle(iconRes = R.drawable.ic_search, onClick = {})
-                        FloatingMiniCircle(iconRes = R.drawable.ic_menu, onClick = onExpandDock)
+                        FloatingMiniCircle(iconRes = R.drawable.ic_list, onClick = onExpandDock)
                     }
                 }
             }

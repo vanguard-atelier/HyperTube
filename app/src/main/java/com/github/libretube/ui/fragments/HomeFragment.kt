@@ -3,9 +3,8 @@ package com.github.libretube.ui.fragments
 import android.os.Bundle
 import android.view.View
 import androidx.compose.ui.platform.ViewCompositionStrategy
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.github.libretube.NavDirections
+import com.github.libretube.helpers.NavigationHelper
+import com.github.libretube.parcelable.PlayerData
 import com.github.libretube.R
 import com.github.libretube.databinding.FragmentHomeBinding
 import com.github.libretube.hyperui.bridge.HyperAppShell
@@ -23,8 +22,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             setContent {
                 HyperAppShell(
                     onVideoPlay = { videoId ->
-                        // Seamless bridge into native player pipeline
-                        findNavController().navigate(NavDirections.actionGlobalPlayerFragment(videoId = videoId))
+                        // Seamless bridge into native player pipeline via NavigationHelper
+                        NavigationHelper.navigateVideo(requireContext(), PlayerData(videoId))
                     }
                 )
             }
